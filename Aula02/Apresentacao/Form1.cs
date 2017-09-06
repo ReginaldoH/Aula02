@@ -25,7 +25,7 @@ namespace Apresentacao
 
             try
             {
-                ClienteNegocio clienetNegocio = new ClienteNegocio();
+                ClienteNegocios clienetNegocios = new ClienteNegocios();
 
                 Cliente cliente = new Cliente();
                 cliente.Nome = txtNome.Text;
@@ -33,9 +33,9 @@ namespace Apresentacao
                 cliente.DataNascimento = txtDataNascimento.Value;
                 cliente.Sexo = chkSexo.Checked;
                 
-                decimal retorno = clienetNegocio.inserir(cliente);
+                string retorno = clienetNegocios.inserir(cliente);
 
-                cliente.IdCliente = (int)retorno;
+               // cliente.IdCliente = (int)retorno;
                 MessageBox.Show("Cadastro efetuado com Sucesso!!!");
             }
 

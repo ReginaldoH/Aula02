@@ -16,16 +16,16 @@ namespace testeConsole
             
             try
             {
-                ClienteNegocio clienetNegocio = new ClienteNegocio();
+                ClienteNegocios clienetNegocios = new ClienteNegocios();
 
 
                 Cliente cliente = new Cliente();
-                cliente.Nome = "Ricardo " + DateTime.Now.Ticks;
+                cliente.Nome = "teste " + DateTime.Now.Ticks;
                 cliente.LimiteCompra = 500;
                 cliente.DataNascimento = DateTime.Now;
                 cliente.Sexo = true;
 
-                decimal retorno = clienetNegocio.inserir(cliente);
+                string retorno = clienetNegocios.inserir(cliente);
 
                 Console.WriteLine(string.Format("Renorno: {0:0.0}", retorno));
             }
