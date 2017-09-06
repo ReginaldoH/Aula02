@@ -61,7 +61,6 @@ namespace AcessoBancoDados
                 throw new Exception(ex.Message);
             }
 
-      
         }
 
         //Consultar registro do Banco de Dados
